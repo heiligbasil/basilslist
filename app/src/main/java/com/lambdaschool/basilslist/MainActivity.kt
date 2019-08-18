@@ -17,6 +17,13 @@ class MainActivity : AppCompatActivity() {
         populateData()
     }
 
+    fun populateData() {
+        for (i in 0..9) {
+            val view = createTextView(itemList[i], userList[i])
+            list_view.addView(view)
+        }
+    }
+
     fun createTextView(item: Item, user: User): TextView {
         val view = TextView(this)
 
@@ -30,33 +37,27 @@ class MainActivity : AppCompatActivity() {
         return view
     }
 
-    fun populateData() {
-        for (i in 0..9) {
-            val view = createTextView(itemList[i], userList[i])
-            list_view.addView(view)
-        }
-    }
-
     fun generateData() {
-        userList.add(User("Strzelce Krajeńskie",1))
-        userList.add(User("Vendas de Galizes",1))
-        userList.add(User("Qiping",4))
-        userList.add(User("Calibishie",4))
-        userList.add(User("Serzedo",3))
-        userList.add(User("Jabranti",3))
-        userList.add(User("Gongxi",1))
-        userList.add(User("Moholm",1))
-        userList.add(User("Všestary",5))
-        userList.add(User("Wantian",1))
+        userList.add(User("Strzelce Krajeńskie", 1))
+        userList.add(User("Vendas de Galizes", 1))
+        userList.add(User("Qiping", 4))
+        userList.add(User("Calibishie", 4))
+        userList.add(User("Serzedo", 3))
+        userList.add(User("Jabranti", 3))
+        userList.add(User("Gongxi", 1))
+        userList.add(User("Moholm", 1))
+        userList.add(User("Všestary", 5))
+        userList.add(User("Wantian", 1))
 
-        itemList.add(Item("Wine - Red Marechal Foch", 82.46f,"Kayveo"))
-        itemList.add(Item("Juice - Clam 46 Oz",125.01f,"Cogibox"))
-        itemList.add(Item("Wine - Red Marechal Foch", 82.46f,"Kayveo"))
-        itemList.add(Item("Juice - Clam 46 Oz",125.01f,"Cogibox"))
-        itemList.add(Item("Wine - Red Marechal Foch", 82.46f,"Kayveo"))
-        itemList.add(Item("Juice - Clam 46 Oz",125.01f,"Cogibox"))
-        itemList.add(Item("Wine - Red Marechal Foch", 82.46f,"Kayveo"))
-        itemList.add(Item("Juice - Clam 46 Oz",125.01f,"Cogibox"))
-        itemList.add(Item("Wine - Red Marechal Foch", 82.46f,"Kayveo"))
+        itemList.add(Item("Wine - Red Marechal Foch", 82.46f, "Kayveo"))
+        itemList.add(Item("Juice - Clam 46 Oz", 125.01f, "Cogibox"))
+        itemList.add(Item("Wine - Red Marechal Foch", 82.46f, "Kayveo"))
+        itemList.add(Item("Juice - Clam 46 Oz", 125.01f, "Cogibox"))
+        itemList.add(Item("Wine - Red Marechal Foch", 82.46f, "Kayveo"))
+        itemList.add(Item("Juice - Clam 46 Oz", 125.01f, "Cogibox"))
+        itemList.add(Item("Wine - Red Marechal Foch", 82.46f, "Kayveo"))
+        itemList.add(Item("Juice - Clam 46 Oz", 125.01f, "Cogibox"))
+        itemList.add(Item("Wine - Red Marechal Foch", 82.46f, "Kayveo"))
+        itemList.add(Item("Juice - Clam 46 Oz", 125.01f, "Cogibox"))
     }
 }
